@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="lib" path="C:/Program Files/gson-2.8.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/User/Downloads/twitter4j-core-3.0.5.jar"/>
+	<classpathentry kind="lib" path="C:/Users/User/Downloads/facebook4j-core-2.4.8.jar"/>
+	<classpathentry kind="lib" path="C:/Users/User/Downloads/restfb-2.0.0-rc.1.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
