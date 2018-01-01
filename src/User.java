@@ -171,12 +171,12 @@ public class User {
     public boolean postToTwitter(String tweet){
 	
         // System.out.println(tConsumerKey + tConsumerSecret + tAccessToken + tAccessSecret + tConsumerKey.getClass());
-		ConfigurationBuilder cb = new ConfigurationBuilder();
-		cb.setDebugEnabled(true)
-		.setOAuthConsumerKey(tConsumerKey)
-	    .setOAuthConsumerSecret(tConsumerSecret)
+	ConfigurationBuilder cb = new ConfigurationBuilder();
+	cb.setDebugEnabled(true)
+  		.setOAuthConsumerKey(tConsumerKey)
+	    	.setOAuthConsumerSecret(tConsumerSecret)
 		.setOAuthAccessToken(tAccessToken)
-	    .setOAuthAccessTokenSecret(tAccessSecret);
+	    	.setOAuthAccessTokenSecret(tAccessSecret);
 	
 	    TwitterFactory tf = new TwitterFactory(cb.build());
 	    Twitter t = tf.getInstance();
