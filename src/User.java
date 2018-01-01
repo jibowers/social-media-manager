@@ -158,41 +158,35 @@ public class User {
     }
     
     public boolean postToFb(String message){
-    	
-    	//System.out.println("* Feed publishing *");
-
     	FacebookClient client = new DefaultFacebookClient(fbAccessToken);
-    	
     	GraphResponse publishMessageResponse =
             client.publish("me/feed", GraphResponse.class, Parameter.with("message", message));
 
         //System.out.println("Published message ID: " + publishMessageResponse.getId());
         //publishMessageResponse.getId();
 
-    	return true;
+       	return true;
     }
     
     public boolean postToTwitter(String tweet){
-    	// System.out.println(tConsumerKey + tConsumerSecret + tAccessToken + tAccessSecret + tConsumerKey.getClass());
+	
+        // System.out.println(tConsumerKey + tConsumerSecret + tAccessToken + tAccessSecret + tConsumerKey.getClass());
 		ConfigurationBuilder cb = new ConfigurationBuilder();
-	    cb.setDebugEnabled(true)
-	        .setOAuthConsumerKey(tConsumerKey)
-	        .setOAuthConsumerSecret(tConsumerSecret)
-	        .setOAuthAccessToken(tAccessToken)
-	        .setOAuthAccessTokenSecret(tAccessSecret);
+		cb.setDebugEnabled(true)
+		.setOAuthConsumerKey(tConsumerKey)
+	    .setOAuthConsumerSecret(tConsumerSecret)
+		.setOAuthAccessToken(tAccessToken)
+	    .setOAuthAccessTokenSecret(tAccessSecret);
 	
 	    TwitterFactory tf = new TwitterFactory(cb.build());
 	    Twitter t = tf.getInstance();
-	
 	    try {
 	    	t.updateStatus(tweet);
 	    	return true;
 	    } catch (TwitterException te) {
 	    	te.printStackTrace();
 	        return false;
-	    }
-  
-			
+	    }		
     }
     
     public void refreshNews(){
